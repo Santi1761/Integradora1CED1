@@ -5,7 +5,7 @@ public class Control {
 	public Control() {
 		
 	}
-	private HashTable<String, Patient> patients;
+	private HashTable<String, Person> patients;
 	
 	
 	public boolean patientVerifier(String name) {
