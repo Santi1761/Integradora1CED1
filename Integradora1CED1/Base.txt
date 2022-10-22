@@ -1,6 +1,0 @@
-23,22,MALE,32,true,2
-127,Victor Manuel Garzon,MALE,19,true,1
-126,Santiago Espinosa,MALE,18,true,4
-123,Juan Jose Diaz,MALE,18,true,2
-125,Mateo Silva Lasso,MALE,18,false,0
-124,Ana Sofia LondoÃ±o,FEMALE,18,false,0
