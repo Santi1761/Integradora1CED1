@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+
 public class HashTable<T,U> implements InterfaceHT<T,U>{
 	
 	public HashTable(int a) {

@@ -54,7 +54,7 @@ public class Main {
 				
 				break;
 			default:
-				System.out.print("WRITE A VALID NUMBER");
+				System.out.print(" ");
 		}
 		
 	}
