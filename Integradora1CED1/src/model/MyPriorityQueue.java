@@ -37,11 +37,7 @@ public class MyPriorityQueue<P extends Person> {
 
 	private PQNode<P> offer(PQNode<P> current, PQNode<P> newNode) {
 
-		//		System.out.println("\n" + newNode.getP().getName() + " in node form: " + newNode.nodeForm());
-		//		
-		//		System.out.println(current.getP().getName() + " location: " + current.getP().getLocation());
-		//		System.out.println(newNode.getP().getName() + " location: " + newNode.getP().getLocation());
-
+	
 		if(current != null) {
 
 			if(newNode.getP().getLocation() < current.getP().getLocation()) {
@@ -50,7 +46,6 @@ public class MyPriorityQueue<P extends Person> {
 
 					current.setLeft(newNode);
 					newNode.setParent(current);
-					//					System.out.println(newNode.getP().getName() + " in node form: " + newNode.nodeFormat());
 					return newNode;
 
 				}  else {
@@ -65,7 +60,6 @@ public class MyPriorityQueue<P extends Person> {
 
 					current.setRight(newNode);
 					newNode.setParent(current);
-					//					System.out.println(newNode.getP().getName() + " in node form: " + newNode.nodeFormat());
 					return newNode;
 
 				} else {
@@ -227,7 +221,6 @@ public class MyPriorityQueue<P extends Person> {
 
 			return line;
 
-			//			return parent.toString()+ " -> [" + left + " <- " + p.toString() + " -> " + right + "]";
 		}
 	}
 }
