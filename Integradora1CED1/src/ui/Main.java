@@ -1,5 +1,9 @@
 package ui;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 import model.Control;
 
@@ -123,5 +127,47 @@ public class Main {
 	public void edit() {
 		System.out.println();
 	}
+	
+	private void importData() throws IOException {
+		
+		char SEPARATOR=';';
+		
+		
+		BufferedReader br = null;
+	      
+	      try {
+	         
+	         br =new BufferedReader(new FileReader("files/Libro1.csv"));
+	         String line = br.readLine();
+	         while (null!=line) {
+	            String [] fields = line.split(",");
+	            System.out.println(Arrays.toString(fields));
+	            
+	            fields = removeTrailingQuotes(fields);
+	            System.out.println(Arrays.toString(fields));
+	            
+	            line = br.readLine();
+	         }
+	         
+	      } catch (Exception e) {
+	         
+	      } finally {
+	         if (null!=br) {
+	            br.close();
+	         }
+	      }
+	      
+		
+	}
+	private static String[] removeTrailingQuotes(String[] fields) {
+		char QUOTE='"';
+
+	      String result[] = new String[fields.length];
+
+	      for (int i=0;i<result.length;i++){
+	         result[i] = fields[i].replaceAll("^"+QUOTE, "").replaceAll(QUOTE+"$", "");
+	      }
+	      return result;
+	   }
 
 }
